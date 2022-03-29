@@ -45,8 +45,7 @@ int main(int argc, char* argv[])
         std::cout << e.what() << std::endl;
     }
 
-    if(rsc != nullptr)
-        delete rsc;
+    delete rsc;
 
     return 0;
 }
