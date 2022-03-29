@@ -10,9 +10,10 @@ void foo()
 class MyPointer
 {
 public:
-    MyPointer(): pointer(new int(15))
+    MyPointer()
     {
         foo();
+        pointer = new int(15);
     }
 
     ~MyPointer()
