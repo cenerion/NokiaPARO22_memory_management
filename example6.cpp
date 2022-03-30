@@ -16,7 +16,7 @@ class Partner
 public:
     void addToFile(std::string element)
     {
-        std::fprintf(shoppingList.get(), element.c_str());
+        std::fprintf(shoppingList.get(), "%s\n", element.c_str());
     }
     ShoppingList shoppingList;
 };
