@@ -12,8 +12,16 @@ class MyPointer
 public:
     MyPointer()
     {
-        foo();
         pointer = new int(15);
+        try
+        {
+            foo();
+        }
+        catch(std::runtime_error const& e)
+        {
+            delete pointer;
+            throw;
+        }
     }
 
     ~MyPointer()
