@@ -1,11 +1,13 @@
 #include <iostream>
+#include <memory>
 
 int main()
 {
-    int* num = new int(10);
+//  int* num = new int(10);
+    std::unique_ptr<int> num = std::make_unique<int>(10);
     std::cout << "Hello World!" << std::endl
               << "Created new int: " << *num << std::endl;
-    delete num;
+//  delete num;
     return 0;
 }
 
